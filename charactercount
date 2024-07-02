@@ -1,0 +1,31 @@
+import java.util.*;
+class Charactercount
+{
+public static void main(String[] args)
+{
+Scanner s=new Scanner(System.in);
+String s1=s.nextLine();
+int a=0,u=0,l=0,d=0,ss=0;
+for( int i=0;i<s1.length();i++)
+{
+char ch=s1.charAt(i);
+if(Character.isLetter(ch))
+{
+a++;
+if(Character.isUpperCase(ch))
+u++;
+else
+l++;
+}
+else if(Character.isDigit(ch))
+d++;
+else
+ss++;
+}
+System.out.println("Alphabet="+a);
+System.out.println("Upper case="+u);
+System.out.println("Lower case="+l);
+System.out.println("Digits="+d);
+System.out.println("Symbols="+ss);
+}
+}
